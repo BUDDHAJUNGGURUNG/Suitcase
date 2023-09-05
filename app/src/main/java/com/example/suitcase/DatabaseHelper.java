@@ -36,6 +36,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+
+    public  Boolean updatePassword(String email, String password){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password",password);
+        Long Result = (long) sqLiteDatabase.update("Users", contentValues, "email=?", new String[]{email});
+        if (Result==-1){
+            return  false;
+        }else {
+            return true;
+        }
+    }
     public  Boolean checkEmail(String email){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("Select * from users where email=?",new String[]{email});
