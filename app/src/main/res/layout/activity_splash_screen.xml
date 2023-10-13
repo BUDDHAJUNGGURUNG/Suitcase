@@ -26,9 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/andada"
-        android:text="You are welcome to find what you need"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+        android:text="Your Journey, Your Style, Your Suitcase, Our Shop !"
+        android:textColor="@color/black"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"/>
 

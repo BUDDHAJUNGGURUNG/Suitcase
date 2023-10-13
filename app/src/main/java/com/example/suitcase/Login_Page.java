@@ -17,7 +17,6 @@ public class Login_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivityLoginPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
 
         databaseHelper=new DatabaseHelper(this);
 

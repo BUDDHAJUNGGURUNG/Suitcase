@@ -29,10 +29,11 @@ public class ResetPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String password = binding.newPassword.getText().toString().trim();
+                String email=intent.getStringExtra("email");
                 String rePassword = binding.rePassword.getText().toString().trim();
 
                 if (password.equals(rePassword)){
-                    Boolean checkPasswordUpdate = databaseHelper.updatePassword(password);
+                    Boolean checkPasswordUpdate = databaseHelper.updatePassword(email,password);
 
                     if (checkPasswordUpdate==true){
                         Intent updatePasswordIntent= new Intent(getApplicationContext(), Login_Page.class);
